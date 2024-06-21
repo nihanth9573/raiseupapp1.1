@@ -9,7 +9,6 @@ const EventForm = () => {
   const [cost, setCost] = useState('');
 
   const handleSubmit = () => {
-    // Handle form submission here
     console.log('Event Name:', eventName);
     console.log('Place:', place);
     console.log('Time:', time);

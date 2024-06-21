@@ -10,6 +10,8 @@ import ProfileScreen from './ALLScreen/ProfileScreen';
 import UploadEvent from './ALLScreen/UploadEvent';
 import FeedScreen from './ALLScreen/FeedScreen';
 import ProfileScreen2 from './ALLScreen/ProfileScreen2';
+import EventScreen from './ALLScreen/EventScreen';
+import SuccessScreen from './ALLScreen/SuccessPage';
 
 
 
@@ -28,7 +30,8 @@ function App() {
         <Stack.Screen name="Profile2"  options={{ headerShown: false }} component={ProfileScreen2} />
         <Stack.Screen name="UploadEventScreen"  options={{ headerShown: false }} component={UploadEvent} />
         <Stack.Screen name="FeedScreen"  options={{ headerShown: false }} component={FeedScreen} />
-      
+        <Stack.Screen name="EventScreen"  options={{ headerShown: false }} component={EventScreen} />
+        <Stack.Screen name="SuccessScreen" options={{ headerShown: false }}  component={SuccessScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
