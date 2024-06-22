@@ -2,39 +2,39 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 
 const EventForm = () => {
-  const [eventName, setEventName] = useState('');
-  const [place, setPlace] = useState('');
-  const [time, setTime] = useState('');
+  const [projectName, setProjectName] = useState('');
+  const [contact, setPlace] = useState('');
+  const [timerequired, setTime] = useState('');
   const [description, setDescription] = useState('');
-  const [cost, setCost] = useState('');
+  const [Requiredamount, setCost] = useState('');
 
   const handleSubmit = () => {
-    console.log('Event Name:', eventName);
-    console.log('Place:', place);
-    console.log('Time:', time);
+    console.log('Project Name:', projectName);
+    console.log('contact:', contact);
+    console.log('Time required:', timerequired);
     console.log('Description:', description);
-    console.log('Cost:', cost);
+    console.log('Required amount:', Requiredamount);
     // You can perform form validation and submit data to backend
   };
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Event Details</Text>
+      <Text style={styles.title}>Project Details</Text>
       <TextInput
         style={styles.input}
-        placeholder="Event Name"
-        value={eventName}
-        onChangeText={text => setEventName(text)}
+        placeholder="Project Name"
+        value={projectName}
+        onChangeText={text => setProjectName(text)}
       />
       <TextInput
         style={styles.input}
-        placeholder="Place"
+        placeholder="contact"
         value={place}
         onChangeText={text => setPlace(text)}
       />
       <TextInput
         style={styles.input}
-        placeholder="Time"
+        placeholder="Time for completion"
         value={time}
         onChangeText={text => setTime(text)}
       />
@@ -47,7 +47,7 @@ const EventForm = () => {
       />
       <TextInput
         style={styles.input}
-        placeholder="Cost of Tickets"
+        placeholder="Required amount"
         value={cost}
         onChangeText={text => setCost(text)}
         keyboardType="numeric"

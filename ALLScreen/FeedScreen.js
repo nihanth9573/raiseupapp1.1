@@ -17,12 +17,12 @@ export default function FeedScreen() {
   }
 
   const data = [
-    { id: '1', title: 'CBIT-ELUSINM', url: 'https://www.shutterstock.com/shutterstock/photos/1423222013/display_1500/stock-vector-music-event-poster-design-template-on-colorful-background-with-flowing-shape-illustration-for-web-1423222013.jpg' },
-    { id: '2', title: 'IARE', url: 'https://www.shutterstock.com/shutterstock/photos/1423222013/display_1500/stock-vector-music-event-poster-design-template-on-colorful-background-with-flowing-shape-illustration-for-web-1423222013.jpg' },
-    { id: '3', title: 'IIT_H', url: 'https://www.shutterstock.com/shutterstock/photos/1423222013/display_1500/stock-vector-music-event-poster-design-template-on-colorful-background-with-flowing-shape-illustration-for-web-1423222013.jpg' },
-    { id: '4', title: 'IIT_H', url: 'https://www.shutterstock.com/shutterstock/photos/1423222013/display_1500/stock-vector-music-event-poster-design-template-on-colorful-background-with-flowing-shape-illustration-for-web-1423222013.jpg' },
-    { id: '5', title: 'IIT_H', url: 'https://www.shutterstock.com/shutterstock/photos/1423222013/display_1500/stock-vector-music-event-poster-design-template-on-colorful-background-with-flowing-shape-illustration-for-web-1423222013.jpg' },
-    { id: '6', title: 'IIT_H', url: 'https://www.shutterstock.com/shutterstock/photos/1423222013/display_1500/stock-vector-music-event-poster-design-template-on-colorful-background-with-flowing-shape-illustration-for-web-1423222013.jpg' },
+    { id: '1', title: 'Fitness app', url: 'https://appsgeyser.com/blog/wp-content/uploads/2023/08/image017-2.jpg' },
+    { id: '2', title: 'project-2', url: 'https://www.liquidplanner.com/wp-content/uploads/2019/04/HiRes-17.jpg' },
+    { id: '3', title: 'project-3', url: 'https://www.liquidplanner.com/wp-content/uploads/2019/04/HiRes-17.jpg' },
+    { id: '4', title: 'project-4', url: 'https://www.liquidplanner.com/wp-content/uploads/2019/04/HiRes-17.jpg' },
+    { id: '5', title: 'project-5', url: 'https://www.liquidplanner.com/wp-content/uploads/2019/04/HiRes-17.jpg' },
+    { id: '6', title: 'project-6', url: 'https://www.liquidplanner.com/wp-content/uploads/2019/04/HiRes-17.jpg' },
   ];
 
   const renderItem = ({ item }) => (
@@ -41,7 +41,7 @@ export default function FeedScreen() {
           <Image source={require('../assets/search.png')} style={styles.searchIcon} />
           <TextInput 
             style={styles.searchInput} 
-            placeholder='Enter The Event Wanna Go...' 
+            placeholder='Enter The Project you want to see...' 
             placeholderTextColor='white' 
           />
         </View>

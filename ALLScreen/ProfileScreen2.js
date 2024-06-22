@@ -20,7 +20,7 @@ export default function ProfileScreen2() {
             position:'relative',bottom:40}}>
         </View>
         <View style={{ position:'relative',bottom:100,marginLeft:"37%"}}>
-            <Text style={{fontSize:30,fontStyle:"normal",fontWeight:'bold'}}>Sannith Kumar</Text>
+            <Text style={{fontSize:30,fontStyle:"normal",fontWeight:'bold'}}>@UserName</Text>
         </View>
         <View style={{backgroundColor:'#f6f6f6',height:450, position:'relative',bottom:70}}>
         <TouchableOpacity onPress={()=>{navigation.navigate('Profile')}}>

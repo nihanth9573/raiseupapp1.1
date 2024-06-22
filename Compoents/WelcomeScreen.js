@@ -1,33 +1,70 @@
-import React from 'react'
-import { Image, Text, View ,StyleSheet, TouchableOpacity} from 'react-native'
+import React from 'react';
+import { Image, Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 
 export default function WelcomeScreen({ navigation }) {
   return (
-   <View style={{backgroundColor:'#ffffff'}}>
-        <Image source={require('../assets/logo.jpg')}style={{width:300,height:300,marginHorizontal:50,marginTop:50}}/>
-        <View style={{marginTop:50,width:'90%',marginHorizontal:20,
-    padding:10,alignContent:'center',justifyContent:'center',borderRadius:10}} >
-        <Text style={{fontSize:30,color:'black',width:"100%",textAlign:'center'}}>
-            Welcome to the
-         </Text>
-        </View>
-        <View style={{width:'90%',backgroundColor:'#Be5125',marginHorizontal:20,
-    padding:10,alignContent:'center',justifyContent:'center',borderRadius:10}} >
-        <Text style={{fontSize:30,color:'white',width:"100%",textAlign:'center'}}>
-            COLCONNECT
-         </Text>
-        </View>
-        <View style={{backgroundColor:'black',width:"100%",height:250,marginTop:100,borderTopRightRadius:50,borderTopLeftRadius:50,elevation:5}}>
-            <TouchableOpacity   onPress={() => navigation.navigate('login')} style={{backgroundColor:'orange',borderRadius:20,width:250,padding:10,marginHorizontal:80,marginTop:80}}>
-                <Text style={{color:'white',fontSize:20,textAlign:'center'}}>Let's Get Started</Text>
-            </TouchableOpacity>
-        </View>
-   </View>
-  )
+    <View style={styles.container}>
+      <Image source={require('../assets/logo.jpg')} style={styles.logo} />
+      <View style={styles.titleContainer}>
+        <Text style={styles.title}>
+          Investor-Entrepreneur Connection App
+        </Text>
+      </View>
+      <View style={styles.footer}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('login')}
+          style={styles.startButton}
+        >
+          <Text style={styles.startButtonText}>Let's Get Started</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
+  );
 }
+
 const styles = StyleSheet.create({
-    container: {
-     flex:1
-    },
-  });
-  
+  container: {
+    flex: 1,
+    backgroundColor: '#ffffff',
+    alignItems: 'center',
+  },
+  logo: {
+    width: '80%',
+    height: '45%',
+    marginTop: '15%',
+  },
+  titleContainer: {
+    marginTop: '5%',
+    width: '90%',
+    padding: 10,
+    alignItems: 'center',
+  },
+  title: {
+    fontSize: 28,
+    color: 'black',
+    textAlign: 'center',
+    fontWeight: 'bold',
+  },
+  footer: {
+    backgroundColor: 'black',
+    width: '100%',
+    height: '30%',
+    marginTop: '10%',
+    borderTopRightRadius: 50,
+    borderTopLeftRadius: 50,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  startButton: {
+    backgroundColor: 'orange',
+    borderRadius: 20,
+    width: '60%',
+    paddingVertical: 15,
+    alignItems: 'center',
+  },
+  startButtonText: {
+    color: 'white',
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+});

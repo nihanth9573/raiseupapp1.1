@@ -15,7 +15,7 @@ export default function LoginScreen({ navigation }) {
   const [error,setError]  = useState(false);
 
   const auth =()=>{
-    if(email == "sannithnalluri@gmail.com" && password == 12345678){
+    if(email == "user@gmail.com" && password == 12345678){
         navigation.navigate('Home');
     }
     else{

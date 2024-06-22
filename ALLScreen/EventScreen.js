@@ -1,24 +1,25 @@
 import React, { useState } from 'react';
-import { View, Text, Image, StyleSheet, TextInput, Button, TouchableOpacity, ScrollView } from 'react-native';
+import { View, Text, Image, StyleSheet, TextInput, TouchableOpacity, ScrollView } from 'react-native';
 import { useRoute } from '@react-navigation/native';
 import { useNavigation } from '@react-navigation/native';
 
 const eventsData = [
-  { id: '1', name: 'CBIT-ELUSINM', date: '24-05-2024', description: 'A grand music event at CBIT', qrUrl: 'https://example.com/qr1.jpg' },
-  { id: '2', name: 'IARE', date: '25-05-2024', description: 'Tech fest at IARE', qrUrl: 'https://example.com/qr2.jpg' },
-  { id: '3', name: 'IIT_H', date: '26-05-2024', description: 'Cultural fest at IIT Hyderabad', qrUrl: 'https://example.com/qr3.jpg' },
+  { id: '1', name: 'A Fitness App', date: '24-05-2024', description: 'A fitness app', qrUrl: 'https://appsgeyser.com/blog/wp-content/uploads/2023/08/image017-2.jpg' },
+  { id: '2', name: 'project-2', date: '25-05-2024', description: 'Tech fest at IARE', qrUrl: 'https://example.com/qr2.jpg' },
+  { id: '3', name: 'project-3', date: '26-05-2024', description: 'Cultural fest at IIT Hyderabad', qrUrl: 'https://example.com/qr3.jpg' },
   // Add more events as needed
 ];
 
 export default function EventScreen() {
   const navigation = useNavigation();
-    const payButtonFunction = ()=>{
-      navigation.navigate('SuccessScreen', {
-        transactionId: '1234567890',
-        date: '24-05-2024',
-        upiId: 'user@upi',
-        });
-    }
+  
+  const payButtonFunction = () => {
+    navigation.navigate('SuccessScreen', {
+      transactionId: '1234567890',
+      date: '24-05-2024',
+      upiId: 'user@upi',
+    });
+  }
     
   const route = useRoute();
   const { id } = route.params;
@@ -32,6 +33,7 @@ export default function EventScreen() {
       setShares(intValue);
     }
   }
+
   if (!event) {
     return (
       <View style={styles.container}>
@@ -59,7 +61,7 @@ export default function EventScreen() {
         <Text style={styles.description}>{event.description}</Text>
         <View style={styles.qrSection}>
           <Text style={styles.qrTitle}>QR Code</Text>
-          <Image source={{ uri: event.qrUrl }} style={styles.qrImage} />
+          <Image source={{ uri: 'https://cdn.britannica.com/17/155017-050-9AC96FC8/Example-QR-code.jpg' }} style={styles.qrImage} />
         </View>
         <View style={styles.sharesSection}>
           <Text style={styles.sharesTitle}>Select Number of Shares</Text>
@@ -165,5 +167,14 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 18,
     fontWeight: 'bold',
+  },
+  errorContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  errorText: {
+    fontSize: 18,
+    color: 'red',
   },
 });

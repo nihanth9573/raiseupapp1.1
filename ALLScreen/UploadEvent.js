@@ -57,44 +57,39 @@ export default function App() {
       <View style={{backgroundColor:'orange',height:100,width:'100%'}}>
       </View>
       <View>
-        <Text style={{fontSize:28,fontWeight:'bold',marginHorizontal:20,marginTop:40}}>Upload Your Event For Free</Text>
+        <Text style={{fontSize:28,fontWeight:'bold',marginHorizontal:20,marginTop:40}}>Upload Your Project For Free</Text>
       </View>
     <View style={{ alignItems: 'center', justifyContent: 'center', }}>
       <TouchableOpacity onPress={pickImageAsync}>
       <ImageViewer selectedImage={selectedImage} />
       {selectedImage?"":<View style={{borderWidth:2,borderColor:'grey',width:"100%",height:100,alignItems: 'center', justifyContent: 'center',}}>
-          <Text>Upload Event Post</Text>
+          <Text>Upload Project Post</Text>
       </View>}
       </TouchableOpacity >
       <View>
-      <Text style={styles.title}>Event Details</Text>
+      <Text style={styles.title}>Project Details</Text>
       <TextInput
         style={styles.input}
-        placeholder="EventName"
+        placeholder="ProjectName"
         value={eventName}
         onChangeText={text => setEventName(text)}
       />
-       <TextInput
-        style={styles.input}
-        placeholder="EventName"
-        value={CollegeName}
-        onChangeText={text => SetCollegeName(text)}
-      /> 
+       
       <TextInput
       style={styles.input}
-      placeholder="Orginsied By"
+      placeholder="Proposed By"
       value={Organiser}
       onChangeText={text => SetOrganizer(text)}
     />
       <TextInput
         style={styles.input}
-        placeholder="Place"
+        placeholder="contact"
         value={place}
         onChangeText={text => setPlace(text)}
       />
       <TextInput
         style={styles.input}
-        placeholder="Time"
+        placeholder="duration"
         value={time}
         onChangeText={text => setTime(text)}
       />
@@ -107,7 +102,7 @@ export default function App() {
       />
       <TextInput
         style={styles.input}
-        placeholder="Cost of Tickets"
+        placeholder="Time Required"
         value={cost}
         onChangeText={text => setCost(text)}
         keyboardType="numeric"
