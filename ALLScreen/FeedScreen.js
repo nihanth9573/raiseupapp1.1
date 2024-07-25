@@ -17,7 +17,7 @@ export default function FeedScreen() {
   }
 
   const data = [
-    { id: '1', title: 'Fitness app', url: 'https://appsgeyser.com/blog/wp-content/uploads/2023/08/image017-2.jpg' },
+    { id: '1', title: 'Fitness', url: 'https://appsgeyser.com/blog/wp-content/uploads/2023/08/image017-2.jpg' },
     { id: '2', title: 'project-2', url: 'https://www.liquidplanner.com/wp-content/uploads/2019/04/HiRes-17.jpg' },
     { id: '3', title: 'project-3', url: 'https://www.liquidplanner.com/wp-content/uploads/2019/04/HiRes-17.jpg' },
     { id: '4', title: 'project-4', url: 'https://www.liquidplanner.com/wp-content/uploads/2019/04/HiRes-17.jpg' },
